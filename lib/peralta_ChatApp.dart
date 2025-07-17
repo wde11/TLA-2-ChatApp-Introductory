@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
-  runApp(ChatApp());
+  runApp(MyApp());
 }
 
-class ChatApp extends StatelessWidget{
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

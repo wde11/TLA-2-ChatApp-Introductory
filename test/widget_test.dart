@@ -5,26 +5,29 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:chatapp/main.dart';
+import 'package:chatapp/peralta_ChatApp.dart'; // Make sure this path is correct
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  // A simple test to verify that the main app widget builds without errors.
+  testWidgets('Chat App smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    // This will load the main widget of your application.
+    await tester.pumpWidget(MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // --- VERIFICATION STEP ---
+    //
+    // Now, verify that a key piece of your UI is present.
+    // For example, let's check if the AppBar title is displayed.
+    //
+    // IMPORTANT: You might need to change 'Chat App' to match the
+    // exact title you are using in your AppBar.
+    expect(find.text('Chat App'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // You can add more checks here. For example, if you have a
+    // welcome message or a specific button, you can test for it:
+    //
+    // expect(find.text('Welcome to ChatApp!'), findsOneWidget);
+    // expect(find.byType(FloatingActionButton), findsOneWidget);
   });
 }
