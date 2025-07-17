@@ -1,6 +1,6 @@
 # chatapp
 
-A new Flutter project.
+Chat App made with Dart.
 
 ## Getting Started
 
