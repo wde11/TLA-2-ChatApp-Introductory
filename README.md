@@ -1,6 +1,6 @@
 # chatapp
 
-Chat App made with Dart.
+Chat App made with Dart!
 
 ## Getting Started
 
